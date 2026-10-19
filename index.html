@@ -6,12 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>First Front</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
     <style>
-           /***********************************
+         /***********************************
          * Folhas de Estilo do Frist Front *
          ***********************************/
 
         /***** Reset Geral *****/
+        /* 
+        Ajusta as tags para se comportar da mesma forma,
+        mesmo com diferenças entre navegadores.
+        +/
 
         /* Todas as caixas */
         * {
@@ -47,9 +52,15 @@
             */
         }
 
-          h1, h2, h3, h4, h5, h6 {
+         /* Remove margens dos títulos. */
+          h1, 
+          h2, 
+          h3, 
+          h4, 
+          h5, 
+          h6 {
             margin: 0;
-            padding: .85rem;
+            padding: 0%;
         }
 
         /***** Cabeçalho *****/
@@ -61,26 +72,67 @@
         }
 
         
+         /* Apenas imagem dentro do header. */
         #wrap > header img {
             display: block;
             width: 5rem;
             height: auto;
         }
 
-         #wrap>header>div {
+        /* Elemento div que contém logo e nome do site. */
+        #wrap > header > div {
             display: flex;
-            align-items:center
+            align-items: center;
         }
 
+        /* Formulário de pesquisa no header. */
         #wrap > header form {
             margin-top: 1rem;
+            display: flex;
         }
 
+        /* O campo de pesquisa cresce o máximo possível. */
+        #wrap > header form input {
+            flex-grow: 1;
+            border-radius: .4rem 0 0 .4rem;
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .2);   
+        }
+
+        #wrap>header form button {
+            border-radius: 0 .4rem .4rem 0;
+        }
+
+        /*  Seleciona todos os filhos do form. */
+        #wrap > header form>* {
+
+            /*Hherda as configurações da fonte dos elementos raiz (HTML, BODY). */
+            font-size: inherit;
+            font-family: inherit;
+
+            border: none;
+            padding: .2rem;
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .2);
+        }
+
+        /* Título (nome) do site. */
         #wrap > header h1 {
             font-size: 2rem;
             color: #ebffac;
+            line-height: 1;
             --webkit-text-stroke: .7px #f5467a;
+            padding: 0;
+            padding-left: .85rem;
         }
+
+
+        /***** Classes de uso geral *****/
+
+        /* Imagens responsivas */
+        img.responsive {
+            max-width: 100%;
+            width: auto;
+        }
+
     </style>
 </head>
 
@@ -102,21 +154,21 @@
             <!-- Formulário de pesquisa no site -->
             <form action="https://www.google.com/search" method="get" target="_blank">
                 <input type="search" name="q" required>
-                <button type="submit">🔎</button>
+                <button type="submit"><i class="fa-solid fa-magnifying-glass fa-fw "></i></button>
             </form>
         </header>
 
-        <hr>
+        
 
         <!-- Menu principal -->
         <nav>
-            <a href="index.html">Início</a>
-            <a href="conteudo.html">Conteúdo</a>
-            <a href="contatos.html">Contatos</a>
-            <a href="sobre.html">Sobre</a>
+            <a href="index.html"><i class="fa-regular fa-house"></i><span>Início</span></a>
+            <a href="conteudo.html"><i class="fa-solid fa-book-bookmark"></i><span>Conteúdo</span></a>
+            <a href="contatos.html"><i class="fa-regular fa-envelope"></i><span>Contatos</span></a>
+            <a href="sobre.html"><i class="fa-regular fa-circle-question"></i><span>Sobre</span></a>
         </nav>
 
-        <hr>
+    
 
         <main>
 
@@ -145,14 +197,14 @@
                     repellendus debitis?</p>
 
                 <h4>Imagem externa</h4>
-                <img src="https://picsum.photos/400/300" alt="Imagem aleatória">
+                <img class= "responsive" src="https://picsum.photos/400/300" alt="Imagem aleatória">
 
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, nobis. Ipsum, doloremque, itaque
                     inventore est ipsa neque nobis alias quaerat vitae saepe dolore aliquid soluta optio at quos
                     suscipit aspernatur!</p>
 
                 <h4>Imagem interna</h4>
-                <img src="img/vaca.png" alt="Vaquinha">
+                <img class= "responsive" src="img/vaca.png" alt="Vaquinha">
 
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio iusto autem laudantium non debitis
                     voluptates alias. Facere, molestiae voluptatum! Nostrum ipsa natus praesentium eos hic mollitia
@@ -169,13 +221,13 @@
 
         </main>
 
-        <hr>
+        
 
         <!-- rodapé -->
         <footer>
-            <a href="index.html">🏠</a>
+            <a href="index.html" title="Ir para a Página Inicial"><i class="fa-regular fa-house fa-fw"></i></a>
             <div>&copy; 2026 Joca da Silva</div>
-            <a href="#top">⬆️</a>
+            <a href="#top" title="Ir para o topo da página"><i class="fa-solid fa-circle-chevron-up"></i></a>
         </footer>
 
     </div>

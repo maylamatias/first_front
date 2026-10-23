@@ -7,133 +7,7 @@
     <title>First Front</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
-    <style>
-         /***********************************
-         * Folhas de Estilo do Frist Front *
-         ***********************************/
-
-        /***** Reset Geral *****/
-        /* 
-        Ajusta as tags para se comportar da mesma forma,
-        mesmo com diferenças entre navegadores.
-        +/
-
-        /* Todas as caixas */
-        * {
-            box-sizing: border-box;
-            outline: none;
-        }
-
-        /* Todos links */
-        a {
-            text-decoration: none;
-            color: #00c7f2;
-        }
-
-        /* Todos os links com ponteiro sobre */
-        a:hover {
-            color: #c2ff00;
-        }
-
-        /* Elementoas raiz */
-        html,
-        body {
-            position: relative;
-            width: 100%;
-            margin: 0;
-            padding: 0;
-
-            /* Definir a fonte padrão e o tamanho */
-            font-family: Lucida Bright;
-            font-size: 16px;
-            /* 
-            O atributo acima define uma unidade "rem". 
-            Iso significa que 1rem = 16px, .5rem = 8px, 2rem = 32px
-            */
-        }
-
-         /* Remove margens dos títulos. */
-          h1, 
-          h2, 
-          h3, 
-          h4, 
-          h5, 
-          h6 {
-            margin: 0;
-            padding: 0%;
-        }
-
-        /***** Cabeçalho *****/
-
-        /*Seleciona o elemento "header" que é o filho direto do elemento div#wrap */
-        #wrap > header {
-            background-color: #ffc2e5;
-            padding: 1rem ;
-        }
-
-        
-         /* Apenas imagem dentro do header. */
-        #wrap > header img {
-            display: block;
-            width: 5rem;
-            height: auto;
-        }
-
-        /* Elemento div que contém logo e nome do site. */
-        #wrap > header > div {
-            display: flex;
-            align-items: center;
-        }
-
-        /* Formulário de pesquisa no header. */
-        #wrap > header form {
-            margin-top: 1rem;
-            display: flex;
-        }
-
-        /* O campo de pesquisa cresce o máximo possível. */
-        #wrap > header form input {
-            flex-grow: 1;
-            border-radius: .4rem 0 0 .4rem;
-            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .2);   
-        }
-
-        #wrap>header form button {
-            border-radius: 0 .4rem .4rem 0;
-        }
-
-        /*  Seleciona todos os filhos do form. */
-        #wrap > header form>* {
-
-            /*Hherda as configurações da fonte dos elementos raiz (HTML, BODY). */
-            font-size: inherit;
-            font-family: inherit;
-
-            border: none;
-            padding: .2rem;
-            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .2);
-        }
-
-        /* Título (nome) do site. */
-        #wrap > header h1 {
-            font-size: 2rem;
-            color: #ebffac;
-            line-height: 1;
-            --webkit-text-stroke: .7px #f5467a;
-            padding: 0;
-            padding-left: .85rem;
-        }
-
-
-        /***** Classes de uso geral *****/
-
-        /* Imagens responsivas */
-        img.responsive {
-            max-width: 100%;
-            width: auto;
-        }
-
-    </style>
+    
 </head>
 
 <body>
@@ -163,8 +37,8 @@
         <!-- Menu principal -->
         <nav>
             <a href="index.html"><i class="fa-regular fa-house"></i><span>Início</span></a>
-            <a href="conteudo.html"><i class="fa-solid fa-book-bookmark"></i><span>Conteúdo</span></a>
-            <a href="contatos.html"><i class="fa-regular fa-envelope"></i><span>Contatos</span></a>
+            <a href="conteudo.html"><i class="fa-solid fa-align-right"></i><span>Conteúdo</span></a>
+            <a href="materias.html"><i class="fa-solid fa-book-bookmark"></i><span>Matérias</span></a>
             <a href="sobre.html"><i class="fa-regular fa-circle-question"></i><span>Sobre</span></a>
         </nav>
 
